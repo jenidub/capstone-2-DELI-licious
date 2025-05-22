@@ -4,6 +4,7 @@ package com.pluralsight;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        System.out.println("this is the deli-licious app!");
+        HomeScreen startProgram = new HomeScreen();
+        startProgram.displayHomeScreen();
     }
 }
