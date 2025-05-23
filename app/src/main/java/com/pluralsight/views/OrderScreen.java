@@ -1,9 +1,16 @@
-package com.pluralsight;
+package com.pluralsight.views;
 
+import com.pluralsight.models.Order;
+import com.pluralsight.utils.OrderItem;
+import com.pluralsight.models.Drink;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class OrderScreen {
+    // class variables
     Scanner scanner = new Scanner(System.in);
+    Order currentOrder = new Order(0, new ArrayList<OrderItem>());
 
     public void displayOrderScreen() {
         boolean activeOrder = true;
@@ -35,19 +42,17 @@ public class OrderScreen {
             // process the user selection with the matching method
             switch(userSelection) {
                 case 1:
-                    System.out.println("Sandwich addSandwich() method");
-                    break;
                 case 2:
-                    System.out.println("Drink addDrink() method");
-                    break;
                 case 3:
-                    System.out.println("Chips addChips() method");
+                    currentOrder.addItemToOrder(userSelection);
+                    currentOrder.displayCurrentOrderTotal();
                     break;
                 case 4:
-                    System.out.println("Checkout displayCheckoutScreen() method");
+                    System.out.println("Checkout class displayCheckoutScreen() method");
                     break;
                 case 0:
                     System.out.println("Cancel order - clear data, return to home screen");
+                    currentOrder.clearOrder();
                     activeOrder = false;
                     break;
                 default:
@@ -65,4 +70,5 @@ public class OrderScreen {
         // instructions message with options
         System.out.println("This is the order screen instructions");
     }
+
 }
