@@ -1,7 +1,6 @@
 package com.pluralsight.models;
 
 import com.pluralsight.utils.OrderItem;
-import com.pluralsight.utils.Size;
 
 import java.util.ArrayList;
 
