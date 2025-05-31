@@ -13,6 +13,7 @@ public class HomeScreen {
             System.out.println("HOME SCREEN MENU");
             System.out.println("[A] Start New Order");
             System.out.println("[B] Exit the Program App");
+            System.out.println("Please select using the corresponding letter:    ");
             String userOption = scanner.nextLine();
 
             switch(userOption.toLowerCase()) {

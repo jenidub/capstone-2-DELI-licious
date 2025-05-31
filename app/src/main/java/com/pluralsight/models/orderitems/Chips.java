@@ -1,4 +1,4 @@
-package com.pluralsight.models;
+package com.pluralsight.models.orderitems;
 
 import com.pluralsight.utils.OrderItem;
 import com.pluralsight.utils.Size;
@@ -40,7 +40,7 @@ public class Chips implements OrderItem {
     }
 
     @Override
-    public double calculateTotal() {
+    public double calculateTotal(Size sandwichSize) {
         return 1.5;
     }
 }

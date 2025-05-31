@@ -2,7 +2,6 @@ package com.pluralsight.views;
 
 import com.pluralsight.models.Order;
 import com.pluralsight.utils.OrderItem;
-import com.pluralsight.models.Drink;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -45,7 +44,7 @@ public class OrderScreen {
                 case 2:
                 case 3:
                     currentOrder.addItemToOrder(userSelection);
-                    currentOrder.displayCurrentOrderTotal();
+//                    currentOrder.displayCurrentOrderTotal();
                     break;
                 case 4:
                     System.out.println("Checkout class displayCheckoutScreen() method");

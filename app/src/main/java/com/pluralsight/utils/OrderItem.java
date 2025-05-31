@@ -10,6 +10,6 @@ package com.pluralsight.utils;
 
 public interface OrderItem  {
     String itemName = "";
-    double calculateTotal();
-//    void displayOrderItemInfo(OrderItem item);
+
+    double calculateTotal(Size sandwichSize);
 }

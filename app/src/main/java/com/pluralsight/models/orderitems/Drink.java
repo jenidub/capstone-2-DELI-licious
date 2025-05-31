@@ -1,4 +1,4 @@
-package com.pluralsight.models;
+package com.pluralsight.models.orderitems;
 
 import com.pluralsight.utils.OrderItem;
 import com.pluralsight.utils.Size;
@@ -74,7 +74,7 @@ public class Drink implements OrderItem {
         }
 
         newDrink.setItemName(String.format("%s Fountain Drink", newDrink.getSize()));
-        newDrink.setPrice(newDrink.calculateTotal());
+        newDrink.setPrice(newDrink.calculateTotal(getSize()));
         displayDrinkConfirmation(newDrink);
         return newDrink;
     }
@@ -91,7 +91,7 @@ public class Drink implements OrderItem {
     }
 
     @Override
-    public double calculateTotal() {
+    public double calculateTotal(Size sandwichSize) {
         return switch (this.size) {
             case SMALL -> 2.00;
             case MEDIUM -> 2.50;
